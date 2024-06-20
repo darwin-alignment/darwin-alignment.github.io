@@ -175,17 +175,16 @@
                 </p>
                 <img src="static/images/result.png" alt="results">
               </div>
-              <!-- <div class="content has-text-justified">
-                <h3 class="title is-4">Analysis</h3>
-                <img src="static/images/analysis_result_1.png" alt="analysis results">
-                <h4 class="title is-8">(A) Ablations</h4>
-                <p>Our ablation results show that all training and inference components play important roles to improve performance off Self-RAG.</p>
+              !-- <div class="content has-text-justified">
 
-                <h4 class="title is-8">(B) Inference-time customization via critique tokens</h4> 
-                <p>Self-RAG enables practitioners to tailor model's behaviors for different fine-grained preferences. For instance, putting more emphasis on whether a model generation is supported by the evidence can increase citation precision (precision in Figure (b)) on long-form generation, while putting less emphasis on it can increase the output fluency as a model may generate output more flexibly and fluently, regardless of whether it is supported by the cite evidence.</p>
-                <h4 class="title is-8">(C) Adaptive retrieval via retrieval tokens</h4>
-                <p>Self-RAGgenerates retrieval tokens by itself when it judges retrieval is necessary, while one can also increase or decrease retrieval frequency based on diverse end tasks. As you can see, retrieval less can hurt performance on Open domain QA (PopQA; 40% relative performance drop) while it gives marginal performance deterioration in fact verification task (PubHealth; 2%).</p>
-              </div> -->
+                <h3 class="title is-4">Analysis</h3>
+                <h4 class="title is-8">(A) Mutation Generally Improves Win Rate (WR)</h4>
+                <p>Our results show that mutation is a robust exploration method, leading to discovering higher reward states, hence general improvement for WR.</p>
+
+                <h4 class="title is-8">(B) Replacement Exploitation Benefits Length Controlled(LC) Win Rate</h4> 
+                <p>Replacement Exploitation tends to generate shorter response compared to other methods, potentially due to exploring less states with exploitation. </p>
+                <h4 class="title is-8">(C) Exploration and Exploitation</h4>
+                <p>Darwin combines the advantage of exploration and exploitation, achieving a more concsistent WR and LC, demostrating the balance between both methods. Furthermore, with more iterations, Darwin's performance on both LC and WR consistently increase unlike other method that saturates quickly.</p>
             </section>
       
 
@@ -200,8 +199,8 @@
 <section class="section" id="Acknowledgement">
   <div class="container is-max-desktop content">
     <h2 class="title">Acknowledgement</h2>
-    <pre><code>This website is created base on <a>https://selfrag.github.io/</a> and <a>nerfies.github.io</a>
-    }</code></pre>
+    <pre>This website is created base on <a>https://selfrag.github.io/</a> and <a>nerfies.github.io</a>
+    </pre>
   </div>
 </section>
 
