@@ -179,10 +179,17 @@
                 <h4 class="title is-8">(A) Mutation Generally Improves Win Rate (WR)</h4>
                 <p>Our results show that mutation is a robust exploration method, leading to discovering higher reward states, hence general improvement for WR.</p>
 
-                <h4 class="title is-8">(B) Replacement Exploitation Benefits Length Controlled(LC) Win Rate</h4> 
+                <h4 class="title is-8">(B) Replacement Exploitation Benefits Length Controlled (LC) Win Rate</h4> 
                 <p>Replacement Exploitation tends to generate shorter response compared to other methods, potentially due to exploring less states with exploitation. </p>
                 <h4 class="title is-8">(C) Exploration and Exploitation</h4>
                 <p>Darwin combines the advantage of exploration and exploitation, achieving a more consistent WR and LC, demostrating the balance between both methods. Furthermore, with more iterations, Darwin's performance on both LC and WR consistently increase unlike other method that saturates quickly.</p>
+                <h4 class="title is-4">Impact of replacement period <i>m</i></h4>
+                <img src="static/images/darwin_ablation.png" alt="results" style="display: block; margin: 0 auto; width: 50%; height: auto;">
+                <p>
+                  By adjusting the replacement period<i>m</i>, we can control the level of exploitation in the tree search process, balancing the trade-off between exploration and exploitation. In our main experiments, we did not tune <i>m</i>. However, our ablation study shows that increasing the replacement period <i>m</i> leads to increases in both the LC and WC of Darwin.
+
+
+                </p>
             </section>
       
 
