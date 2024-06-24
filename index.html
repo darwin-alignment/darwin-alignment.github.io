@@ -56,7 +56,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://github.com/declare-lab/darwin"
+                <a href="https://arxiv.org/pdf/2406.15193"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -88,8 +88,9 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">DARWIN</span> 
+        <span class="dnerf">DARWIN is a decode-time inference technique that uses a reward-guided tree search framework to align the LLM and achieve comparable performance to preference optimization on 2 instruction following benchmarks.</span> 
       </h2>
+      <img src="static/images/darwin_flow.png" alt="BUFFET teaser.">
       <img src="static/images/darwin_overview.png" alt="BUFFET teaser.">
     </div>
   </div>
@@ -101,16 +102,14 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Summary</h2>
         <div class="content has-text-justified">
-          <p><b>The Problem: Alignment tax</b><br>Preference optimization fine-tunes LLM to align them to human preference. However, such methods may result drop of performance in LLM on certain task. Learning specific human preference User preference may also shift, resulting in LLM becoming unaligned. 
-          <p><b>Aligning without finetuning </b><br> Decoding time alignment address these issue through trading inference latency with model alignment performance. Through framing LLM generation as a tree search process, models can be aligned through using a reward model to guide the tree search.
-          Previous similar approaches  did not  employ reward-guided search effectively, achieving almost no performance increase on instruction-following benchmarks.</p>
+          <p><b>The Problem: Alignment tax</b><br> Common preference optimization techniques aligns LLMs with human preferences through fine-tuning. However, this process can potentially degrade the model's performance on certain tasks. Additionally, as user preferences evolve over time, the LLM may become misaligned with current user expectations.
+          <p><b>Aligning without finetuning </b><br> Decoding time alignment achieves alignment by treating LLM generation as a reward-guided  tree search problem. This approach trades inference latency for model alignment performance. Unlike previous decoding alignment methods that saw little benefit, this technique shows significant gains on instruction-following benchmarks.</p>
           <!-- <p> Can we train a model that can decide when to retrieve, judges if retrieved passages are indeed helpful and generates conditioned on them? Can we build a reliable instruction-following LM that can provide citations?</p> -->
           <p><b>What is <b><span style="color: red">Darwin</span></b>?</b><br>
-           <span style="color: red"><b>Darwin</b></span> is a decode time inference technique that is based on <b>reward-guided tree search</b> framework to align the LLM. Through combining different strategies of exploration and exploitation of the <b>reward-guided tree search</b>,
-           we balance the exploration and exploitation of rewards, minimizing reward over-optimization and improve model alignment. We employ an off-the-shelf reward model from RewardBench to guide the tree search.
+           <span style="color: red"><b>Darwin</b></span> is a decode-time inference technique that uses a reward-guided tree search framework to align the LLM. It balances exploration and exploitation of rewards by combining different search strategies, which helps minimize reward over-optimization and improves model alignment. The technique employs a pre-existing reward model from RewardBench to guide the tree search process.
           
             <p><b>How good is <b><span style="color: red">Darwin</span></b>?</b><br>
-            Experiments show that <b><span style="color: red">Darwin</span>  significantly outperforms other decode-time alignment techniques such as ARGS on  two popular instruction-following benchmarks Alpaca Eval2 and MT-bench</b>. 
+            Experiments show that <b><span style="color: red">Darwin</span>  significantly outperforms other decode-time alignment techniques such as ARGS on two popular instruction-following benchmarks Alpaca Eval2 and MT-bench</b>. 
            Additionally, <span style="color: red">Darwin</span> outperforms direct alignment techniques such as DPO on MT-bench and achieve comparable performance on Alpaca Eval2.
           </p>
         </div>
@@ -175,7 +174,7 @@
                 </p>
                 <img src="static/images/result.png" alt="results">
               </div>
-              !-- <div class="content has-text-justified">
+               <div class="content has-text-justified">
 
                 <h3 class="title is-4">Analysis</h3>
                 <h4 class="title is-8">(A) Mutation Generally Improves Win Rate (WR)</h4>
@@ -191,8 +190,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{INSERT BIBTEX
-    }</code></pre>
+    <pre><code>@misc{hung2024reward,
+      title={Reward Steering with Evolutionary Heuristics for Decoding-time Alignment}, 
+      author={Chia-Yu Hung and Navonil Majumder and Ambuj Mehrish and Soujanya Poria},
+      year={2024},
+      eprint={2406.15193},
+      archivePrefix={arXiv},
+      primaryClass={id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
+}</code></pre>
   </div>
 </section>
 
